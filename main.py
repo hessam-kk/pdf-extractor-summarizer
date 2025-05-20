@@ -54,7 +54,7 @@ def summarize_text(text):
         response = client.chat.completions.create(
             model="gpt-3.5-turbo",
             messages=[
-                {"role": "system", "content": "متن زیر را به زبان فارسی خلاصه کن."},
+                {"role": "system", "content": "متن زیر را به زبان فارسی خلاصه کن و سعی کن از منطق وزن دهی به تیتر ها و جدا کردن بخش های مهم و غیر مهم استفاده کنی. این حلاصه سازی باید به صورت حرفه ای انجام شود."},
                 {"role": "user", "content": chunk}
             ]
         )
