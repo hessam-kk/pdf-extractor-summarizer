@@ -40,8 +40,7 @@
 ├── .gitignore
 └── .github/
 └── assets/
-├── banner.png
-└── demo.png
+└── 8b596a0d-6b0e-4d60-8a11-b8768e20d837.png
 ```
 
 
