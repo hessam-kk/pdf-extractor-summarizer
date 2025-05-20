@@ -1,8 +1,4 @@
 ![PDF Summarizer Banner](https://raw.githubusercontent.com/nerdznj/pdf-summarizer/main/.github/assets/banner.png)
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![License](https://img.shields.io/badge/License-MIT-green)
-![OCR](https://img.shields.io/badge/OCR-Tesseract-orange)
-![Summarization](https://img.shields.io/badge/Summarization-GPT--3.5-yellow)
 
 <h1 align="center">🧠 PDF Summarizer | خلاصه‌ساز PDF فارسی</h1>
 
@@ -33,6 +29,17 @@
 
 ---
 
+📂 ساختار پروژه
+📁 pdf-summarizer/
+├── main.py
+├── requirements.txt
+├── README.md
+├── .gitignore
+└── .github/
+    └── assets/
+        ├── banner.png
+        └── demo.png
+
 ## 🧩 تکنولوژی‌ها و کتابخانه‌ها
 
 | تکنولوژی | کاربرد |
@@ -54,3 +61,12 @@
 git clone https://github.com/nerdznj/pdf-summarizer.git
 cd pdf-summarizer
 pip install -r requirements.txt
+
+## 🤝 مشارکت در پروژه
+
+اگر علاقه‌مند به بهبود این پروژه هستید، خوشحال می‌شویم که مشارکت کنید! لطفاً یک Fork از پروژه بزنید و Pull Request ارسال کنید.
+
+## 📄 مجوز
+
+این پروژه تحت مجوز MIT منتشر شده است. برای اطلاعات بیشتر، فایل LICENSE را مشاهده کنید.
+
