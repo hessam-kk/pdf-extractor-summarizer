@@ -1,4 +1,8 @@
 ![PDF Summarizer Banner](https://raw.githubusercontent.com/nerdznj/pdf-summarizer/main/.github/assets/banner.png)
+![Python](https://img.shields.io/badge/Python-3.10-blue)
+![License](https://img.shields.io/badge/License-MIT-green)
+![OCR](https://img.shields.io/badge/OCR-Tesseract-orange)
+![Summarization](https://img.shields.io/badge/Summarization-GPT--3.5-yellow)
 
 <h1 align="center">🧠 PDF Summarizer | خلاصه‌ساز PDF فارسی</h1>
 
