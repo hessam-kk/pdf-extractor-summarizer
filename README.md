@@ -1,4 +1,7 @@
 ![PDF Summarizer Banner](https://raw.githubusercontent.com/nerdznj/pdf-summarizer/main/.github/assets/banner.png)
+<p align="center">
+  <img src=".github/assets/logo.png" alt="pdf-summarizer logo" width="200"/>
+</p>
 
 <h1 align="center">🧠 PDF Summarizer | خلاصه‌ساز PDF فارسی</h1>
 
