@@ -1,4 +1,3 @@
-![PDF Summarizer Banner](https://raw.githubusercontent.com/nerdznj/pdf-summarizer/main/.github/assets/banner.png)
 <p align="center">
   <img src=".github/assets/8b596a0d-6b0e-4d60-8a11-b8768e20d837.png" alt="pdf-summarizer logo" width="200"/>
 </p>
