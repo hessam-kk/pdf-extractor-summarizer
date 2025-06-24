@@ -64,9 +64,25 @@ def summarize_text(text):
 
 # ذخیره متن در فایل
 def save_to_file(text, file_path):
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(text)
-    print(f"فایل در مسیر {file_path} ذخیره شد.")
+    while True:
+        try:
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(text)
+                print(f"فایل در مسیر {file_path} ذخیره شد.")
+            break  
+            
+        except (IOError, PermissionError, FileNotFoundError) as e:
+            print(f"\n خطا: امکان ذخیره فایل در مسیر '{file_path}' وجود ندارد.")
+            print(f"  دلیل: {e}")
+            
+            # درخواست مسیر جدید از کاربر
+            new_path = input(r"لطفا یک مسیر کامل جدید وارد کنید (مثلاً: C:\Users\YourUser\Desktop\my_file.txt): ")
+            
+            if new_path.strip(): 
+                file_path = new_path
+            else:
+                print("ورودی خالی است. لطفا یک مسیر صحیح وارد کنید.")
+
 
 
 # اجرای مراحل
