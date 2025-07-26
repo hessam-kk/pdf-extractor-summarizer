@@ -5,6 +5,9 @@ from PIL import Image, ImageFilter, ImageEnhance
 import cv2
 import numpy as np
 
+import os
+
+
 # مسیر نصب Tesseract
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 
@@ -64,20 +67,36 @@ def summarize_text(text):
 
 # ذخیره متن در فایل
 def save_to_file(text, file_path):
-    with open(file_path, "w", encoding="utf-8") as f:
-        f.write(text)
-    print(f"فایل در مسیر {file_path} ذخیره شد.")
+    while True:
+        try:
+            with open(file_path, "w", encoding="utf-8") as f:
+                f.write(text)
+                print(f"فایل در مسیر {file_path} ذخیره شد.")
+            break  
+            
+        except (IOError, PermissionError, FileNotFoundError) as e:
+            print(f"\n خطا: امکان ذخیره فایل در مسیر '{file_path}' وجود ندارد.")
+            print(f"  دلیل: {e}")
+            
+            # درخواست مسیر جدید از کاربر
+            new_path = input(r"لطفا یک مسیر کامل جدید وارد کنید (مثلاً: C:\Users\YourUser\Desktop\my_file.txt): ")
+            
+            if new_path.strip(): 
+                file_path = new_path
+            else:
+                print("ورودی خالی است. لطفا یک مسیر صحیح وارد کنید.")
+
 
 
 # اجرای مراحل
 if __name__ == "__main__":
     try:
         extracted_text = extract_text_from_pdf(pdf_file_path, poppler_path)
-        extracted_text_file = r"C:\Users\nerdz\Desktop\extracted_text.txt"
+        extracted_text_file = os.path.expanduser(r"~\Desktop\extracted_text.txt")
         save_to_file(extracted_text, extracted_text_file)
 
         summarized_text = summarize_text(extracted_text)
-        summarized_text_file = r"C:\Users\nerdz\Desktop\summarized_text.txt"
+        summarized_text_file = os.path.expanduser(r"~\Desktop\summarized_text.txt")
         save_to_file(summarized_text, summarized_text_file)
 
     except Exception as e:
